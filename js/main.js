@@ -177,11 +177,15 @@ function dataSend() {
                             </div>
                           </div>
                         `;
+                          return;
     });
-
-    document.getElementById('list-evaluates').innerHTML = evaluatesView;
-    return;
-  } return;
+    if (evaluatesView.length == 0) {
+      document.getElementById('list-evaluates').innerHTML = evaluatesView;
+    }
+    else{
+      $('#list-evaluates').append(evaluatesView);
+    }
+  }
 }
 
 // start contact
